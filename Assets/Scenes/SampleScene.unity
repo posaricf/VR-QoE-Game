@@ -2077,7 +2077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &108146505
 Transform:
   m_ObjectHideFlags: 0
@@ -2094,7 +2094,7 @@ Transform:
   - {fileID: 1043657426}
   - {fileID: 1664948291}
   m_Father: {fileID: 4756363362179685154}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1001 &108766924
 PrefabInstance:
@@ -3170,7 +3170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166939632}
   m_LocalRotation: {x: -0, y: 0.79952335, z: -0, w: 0.60063505}
-  m_LocalPosition: {x: 2.566, y: 0.2938, z: -2.526}
+  m_LocalPosition: {x: 2.566, y: 0.3, z: -2.526}
   m_LocalScale: {x: 0.24687357, y: 0.0002921248, z: 0.3193129}
   m_Children:
   - {fileID: 100782047}
@@ -7347,7 +7347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430677919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.41}
+  m_LocalPosition: {x: 0, y: 0, z: -0.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 313791604}
@@ -13581,6 +13581,34 @@ PrefabInstance:
       propertyPath: m_LineLength
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4702550430524140667, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550430524140667, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550430524140667, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550430524140667, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.atime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550430524140667, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550430524140667, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550430524140667, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key2.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4702550432164445021, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_MaxRaycastDistance
       value: 2
@@ -13597,6 +13625,34 @@ PrefabInstance:
       propertyPath: m_LineLength
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4702550432164445023, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550432164445023, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550432164445023, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550432164445023, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.atime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550432164445023, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550432164445023, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702550432164445023, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key2.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8272058595024714075, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_Name
       value: Left Hand Base Controller
@@ -13608,10 +13664,14 @@ PrefabInstance:
     - target: {fileID: 8272058595024714079, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_ModelPrefab
       value: 
-      objectReference: {fileID: 400012, guid: 5d44b47caf0eb824bade785d78f776f3, type: 3}
+      objectReference: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
     - target: {fileID: 8272058595504974780, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058595637205728, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_Velocity
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8272058595637205728, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_RaycastMask.m_Bits
@@ -13629,10 +13689,26 @@ PrefabInstance:
       propertyPath: m_LineLength
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8272058595637205730, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058595637205730, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058595637205730, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058595637205730, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8272058595637205735, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_ModelPrefab
       value: 
-      objectReference: {fileID: 400012, guid: 5d44b47caf0eb824bade785d78f776f3, type: 3}
+      objectReference: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
     - target: {fileID: 8272058595637205741, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_Name
       value: Left Hand Teleport Controller
@@ -13653,10 +13729,54 @@ PrefabInstance:
       propertyPath: m_LineLength
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key0.b
+      value: 0.06007475
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key0.g
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key0.r
+      value: 0.3274554
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key1.b
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key1.g
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_ValidColorGradient.key1.r
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272058596068216449, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8272058596068216454, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_ModelPrefab
       value: 
-      objectReference: {fileID: 400014, guid: a5ff41a7886a0ba429cf9e8b9620d2e9, type: 3}
+      objectReference: {fileID: 5686134208185136530, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+    - target: {fileID: 8272058596068216455, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
+      propertyPath: m_Velocity
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8272058596068216455, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 64
@@ -13732,7 +13852,7 @@ PrefabInstance:
     - target: {fileID: 8272058596786027395, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_ModelPrefab
       value: 
-      objectReference: {fileID: 400014, guid: a5ff41a7886a0ba429cf9e8b9620d2e9, type: 3}
+      objectReference: {fileID: 5686134208185136530, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
     - target: {fileID: 8272058596786027407, guid: e9f304555eac0b141bdd13231a49d5b8, type: 3}
       propertyPath: m_Name
       value: Right Hand Base Controller
@@ -19013,12 +19133,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098442733}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.000000059604645}
-  m_LocalPosition: {x: 0.04115987, y: 0.63874316, z: 0.043222427}
-  m_LocalScale: {x: 0.14495456, y: 0.14495455, z: 0.14495456}
+  m_LocalRotation: {x: -0, y: -0.00000008940697, z: -0, w: -1}
+  m_LocalPosition: {x: 0.023, y: 0.529, z: -0.377}
+  m_LocalScale: {x: 0.10581682, y: 0.10581681, z: 0.10581682}
   m_Children: []
-  m_Father: {fileID: 4756363362179685154}
-  m_RootOrder: 1
+  m_Father: {fileID: 4755846783048785863}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!212 &1098442735
 SpriteRenderer:
@@ -25700,7 +25820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353003655}
   m_LocalRotation: {x: -0, y: -0.75604635, z: -0, w: 0.654518}
-  m_LocalPosition: {x: -0.673, y: 0.553, z: 0.32}
+  m_LocalPosition: {x: -0.673, y: 0.559, z: 0.32}
   m_LocalScale: {x: 0.24687357, y: 0.0002921248, z: 0.3193129}
   m_Children:
   - {fileID: 590106101}
@@ -26610,8 +26730,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.029986456, z: 0.5000002}
-  m_Center: {x: -0, y: 0.7541345, z: -0.000000039177642}
+  m_Size: {x: 2, y: 0.032426823, z: 0.5000002}
+  m_Center: {x: -0, y: 0.7553549, z: -0.000000039177642}
 --- !u!65 &1409505685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26623,8 +26743,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.33874026, z: 0.5000002}
-  m_Center: {x: -0, y: 0.16937013, z: -0.000000039177642}
+  m_Size: {x: 2, y: 0.34295708, z: 0.5000002}
+  m_Center: {x: -0, y: 0.17147854, z: -0.000000039177642}
 --- !u!65 &1409505686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38802,7 +38922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057112974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -0.321}
+  m_LocalPosition: {x: -0, y: 0, z: 0.428}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 313791604}
@@ -41438,7 +41558,8 @@ Transform:
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -2.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1098442734}
   m_Father: {fileID: 4760724859963079752}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42122,7 +42243,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2030741801}
-  - {fileID: 1098442734}
   - {fileID: 108146505}
   m_Father: {fileID: 4760724859963079752}
   m_RootOrder: 5
