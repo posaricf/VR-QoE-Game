@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Video;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class StartGameScript : MonoBehaviour
@@ -7,10 +8,9 @@ public class StartGameScript : MonoBehaviour
     [SerializeField] private TeleportationArea _firstLevelArea;
     [SerializeField] private TeleportationArea _lastLevelArea;
     [SerializeField] private XRSocketInteractor _socket;
-    [SerializeField] private TextMeshProUGUI _firstBlackboardText;
-    [SerializeField] private TextMeshProUGUI _secondBlackboardText;
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _startLocation;
+    [SerializeField] private VideoPlayer _videoPlayer;
 
     private void Update()
     {
@@ -21,12 +21,12 @@ public class StartGameScript : MonoBehaviour
     {
         if (_socket.hasSelection)
         {
-            _firstBlackboardText.text = "";
-            _secondBlackboardText.text = "";
             _firstLevelArea.enabled = true;
             _lastLevelArea.enabled = false;
 
             _player.transform.position = _startLocation.transform.position;
+
+            _videoPlayer.Play();
 
             gameObject.SetActive(false);
         }
