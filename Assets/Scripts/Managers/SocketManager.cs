@@ -22,7 +22,10 @@ public class SocketManager : MonoBehaviour
             if (CheckCompletion())
             {
                 OnUnlockDoor?.Invoke(_roomId);
-                _roomId++;
+                if (_roomId < _socketParents.Count - 1)
+                {
+                    _roomId++;
+                }
             }
         }
     }
@@ -66,6 +69,16 @@ public class SocketManager : MonoBehaviour
         if (_fakePapers > 0)
         {
             return false;
+        }
+        else
+        {
+            foreach (Transform child in _socketParents[_roomId].transform)
+            {
+                var socket = child.GetComponent<XRSocketInteractor>();
+                IXRSelectInteractable paper = socket.GetOldestInteractableSelected();
+                BoxCollider boxCollider = paper.transform.GetComponent<BoxCollider>();
+                boxCollider.enabled = false;
+            }
         }
 
         return true;

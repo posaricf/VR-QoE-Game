@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -5,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class TeleportationAreaManager : MonoBehaviour
 {
     [SerializeField] private List<TeleportationArea> _teleportationAreas;
+
+    public static Action<int> OnNewVideo;
 
     private void OnEnable()
     {
@@ -19,5 +22,6 @@ public class TeleportationAreaManager : MonoBehaviour
     private void ActivateTeleportationArea(int areaId)
     {
         _teleportationAreas[areaId].enabled = true;
+        OnNewVideo?.Invoke(areaId);
     }
 }
