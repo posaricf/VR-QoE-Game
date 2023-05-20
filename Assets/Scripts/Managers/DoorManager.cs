@@ -25,5 +25,10 @@ public class DoorManager : MonoBehaviour
         _doors[doorId].GetComponent<Rigidbody>().isKinematic = false;
         _doors[doorId].GetComponent<Rigidbody>().useGravity = true;
         OnActivateTeleportationArea?.Invoke(doorId);
+
+        if (doorId == _doors.Count - 1)
+        {
+            StateManager.gameOver = true;
+        }
     }
 }

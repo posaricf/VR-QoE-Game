@@ -1,11 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class PaperInteractability : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> _papers;
     [SerializeField] private List<GameObject> _decoyPapers;
 
     private void OnEnable()
