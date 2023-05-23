@@ -14,6 +14,7 @@ public class StartGameScript : MonoBehaviour
 
     private void Update()
     {
+        StateManager.gameOver = true;
         StartGame();
     }
 

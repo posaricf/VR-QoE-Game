@@ -7,11 +7,14 @@ using UnityEngine.UI;
 public class QuizController : MonoBehaviour
 {
     [SerializeField] private Button _shuffleButton;
+    [SerializeField] private Button _resetButton;
     [SerializeField] private GameObject _landingPage;
     [SerializeField] private GameObject _finalPage;
     [SerializeField] private List<GameObject> _quizPages;
 
     public static Action OnGenerateNewOrder;
+    public static Action OnResetAnswerButtons;
+    public static Action<GameObject> OnShuffleAnswerButtons;
     public static Action<GameObject> OnDelegateAnswerButtons;
 
     private int[] _questionOrder;
@@ -20,26 +23,37 @@ public class QuizController : MonoBehaviour
     private void OnEnable()
     {
         _shuffleButton?.onClick.AddListener(SetNewQuestionOrder);
-        QuestionController.OnNewPageOrder += SetQuestionOrder;
         AnswerButton.OnNextQuestion += EnableNextQuestion;
     }
 
     private void OnDisable()
     {
         _shuffleButton?.onClick.RemoveListener(SetNewQuestionOrder);
-        QuestionController.OnNewPageOrder -= SetQuestionOrder;
         AnswerButton.OnNextQuestion -= EnableNextQuestion;
+    }
+
+    public void RestartQuiz()
+    {
+        _currentPageNo = 0;
+        ShowNextQuestion(_finalPage, _landingPage);
+        AnswerController.ResetScore();
+
+        foreach (GameObject page in _quizPages)
+        {
+            GameObject nextButtonObject = page.transform.Find("NextBtn").gameObject;
+            Button nextButton = nextButtonObject.GetComponent<Button>();
+
+            nextButtonObject.SetActive(false);
+            nextButton.onClick.RemoveListener(NextQuestion);
+        }
     }
 
     private void SetNewQuestionOrder()
     {
-        OnGenerateNewOrder?.Invoke();
-    }
+        _questionOrder = QuestionController.GenerateRandomOrder(_quizPages.Count);
 
-    private void SetQuestionOrder(int[] newPageOrder)
-    {
-        _questionOrder = newPageOrder;
-        ShowNextQuestion(_landingPage, _quizPages[newPageOrder[_currentPageNo]]);
+        ShowNextQuestion(_landingPage, _quizPages[_questionOrder[_currentPageNo]]);
+        PrepareAnswers(_quizPages[_questionOrder[_currentPageNo]]);
     }
 
     private void ShowNextQuestion(GameObject currentPage, GameObject nextPage)
@@ -62,11 +76,13 @@ public class QuizController : MonoBehaviour
     private void NextQuestion()
     {
         GameObject currentPage = _quizPages[_questionOrder[_currentPageNo]];
+        Debug.Log("Trenutna stranica1: " + _currentPageNo);
 
         if (_currentPageNo < _quizPages.Count - 1)
         {
             GameObject nextPage = _quizPages[_questionOrder[_currentPageNo + 1]];
             ShowNextQuestion(currentPage, nextPage);
+            PrepareAnswers(nextPage);
             _currentPageNo++;
         }
         else
@@ -83,5 +99,11 @@ public class QuizController : MonoBehaviour
         
         description.text = string.Format("Rezultat: {0}/{1}", AnswerController.GetScore(), _quizPages.Count);
         description.fontSize = 300;
+    }
+
+    private void PrepareAnswers(GameObject nextPage)
+    {
+        OnShuffleAnswerButtons?.Invoke(nextPage);
+        OnResetAnswerButtons?.Invoke();
     }
 }

@@ -17,8 +17,6 @@ public class SocketManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(StateManager.gameOver);
-
         if (CheckSockets())
         {
             if (CheckCompletion())
