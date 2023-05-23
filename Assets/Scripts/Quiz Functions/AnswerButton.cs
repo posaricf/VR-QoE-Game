@@ -24,6 +24,7 @@ public class AnswerButton : MonoBehaviour
         _button.onClick.AddListener(AnswerButtonClicked);
         AnswerController.OnAnswerValidation += ValidateAnswer;
         QuizController.OnResetAnswerButtons += ResetButton;
+        TimeController.OnDisableButtons += ToggleButtonInteractability;
     }
 
     private void OnDisable()
@@ -31,6 +32,7 @@ public class AnswerButton : MonoBehaviour
         _button.onClick.RemoveListener(AnswerButtonClicked);
         AnswerController.OnAnswerValidation -= ValidateAnswer;
         QuizController.OnResetAnswerButtons -= ResetButton;
+        TimeController.OnDisableButtons -= ToggleButtonInteractability;
     }
 
     private void ToggleButtonInteractability(bool toggleValue)

@@ -12,8 +12,10 @@ public class QuizController : MonoBehaviour
     [SerializeField] private GameObject _finalPage;
     [SerializeField] private List<GameObject> _quizPages;
 
-    public static Action OnGenerateNewOrder;
+    public static Action OnQuizStarted;
     public static Action OnResetAnswerButtons;
+    public static Action OnStartTimer;
+    public static Action OnQuizEnded;
     public static Action<GameObject> OnShuffleAnswerButtons;
     public static Action<GameObject> OnDelegateAnswerButtons;
 
@@ -24,12 +26,14 @@ public class QuizController : MonoBehaviour
     {
         _shuffleButton?.onClick.AddListener(SetNewQuestionOrder);
         AnswerButton.OnNextQuestion += EnableNextQuestion;
+        TimeController.OnTimerEnded += EnableNextQuestion;
     }
 
     private void OnDisable()
     {
         _shuffleButton?.onClick.RemoveListener(SetNewQuestionOrder);
         AnswerButton.OnNextQuestion -= EnableNextQuestion;
+        TimeController.OnTimerEnded -= EnableNextQuestion;
     }
 
     public void RestartQuiz()
@@ -51,7 +55,7 @@ public class QuizController : MonoBehaviour
     private void SetNewQuestionOrder()
     {
         _questionOrder = QuestionController.GenerateRandomOrder(_quizPages.Count);
-
+        OnQuizStarted?.Invoke();
         ShowNextQuestion(_landingPage, _quizPages[_questionOrder[_currentPageNo]]);
         PrepareAnswers(_quizPages[_questionOrder[_currentPageNo]]);
     }
@@ -76,7 +80,6 @@ public class QuizController : MonoBehaviour
     private void NextQuestion()
     {
         GameObject currentPage = _quizPages[_questionOrder[_currentPageNo]];
-        Debug.Log("Trenutna stranica1: " + _currentPageNo);
 
         if (_currentPageNo < _quizPages.Count - 1)
         {
@@ -94,6 +97,8 @@ public class QuizController : MonoBehaviour
 
     private void QuizEnding()
     {
+        OnQuizEnded?.Invoke();
+
         GameObject descriptionObject = _finalPage.transform.Find("Description").gameObject;
         var description = descriptionObject.GetComponent<TextMeshPro>();
         
@@ -105,5 +110,6 @@ public class QuizController : MonoBehaviour
     {
         OnShuffleAnswerButtons?.Invoke(nextPage);
         OnResetAnswerButtons?.Invoke();
+        OnStartTimer?.Invoke();
     }
 }
