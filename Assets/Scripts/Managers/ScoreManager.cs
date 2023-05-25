@@ -23,14 +23,13 @@ public class ScoreManager : MonoBehaviour
         TextMeshProUGUI textField = _textFields[scoreboardId];
         if (incorrectAnswers > 0)
         {
-            textField.text = string.Format("To?no: {0}/4\n\nPregledajte pitanja ponovno!", 4 - incorrectAnswers);
+            textField.text = string.Format("Ispravno: {0}/4\n\nPregledajte pitanja ponovno!", 4 - incorrectAnswers); ;
         }
         else
         {
-            textField.text = "To?no: 4/4\n\nOtvorena vrata sljede?e prostorije!";
+            textField.text = "Ispravno: 4/4\n\nOtvorena nova prostorija!";
         }
     }
-
     private void ResetScore(int scoreboardId)
     {
         if (_textFields[scoreboardId].text != string.Empty)

@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -14,7 +13,6 @@ public class StartGameScript : MonoBehaviour
 
     private void Update()
     {
-        StateManager.gameOver = true;
         StartGame();
     }
 
