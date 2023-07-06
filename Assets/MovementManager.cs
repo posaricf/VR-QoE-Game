@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class MovementManager : MonoBehaviour
@@ -11,18 +10,16 @@ public class MovementManager : MonoBehaviour
     [SerializeField] private ActionBasedContinuousMoveProvider _continuousMovementController;
     [SerializeField] private TeleportationProvider _teleportationProvider;
     [SerializeField] private ActionBasedSnapTurnProvider _snapTurnProvider;
+    [SerializeField] private ActionBasedContinuousTurnProvider _continuousTurnProvider;
     
-    [Space]
-    [SerializeField] private InputActionProperty _leftHandTurn;
-
     private bool _isTeleportationEnabled = true;
-    private InputActionProperty _uselessProperty = new InputActionProperty();
 
     public void CheckMovementSystem()
     {
         if (_isTeleportationEnabled)
         {
             EnableContinuousMovement(true);
+            EnableContinuousTurn(true);
             EnableTeleportation(false);
             EnableSnapTurn(false);
             _isTeleportationEnabled = false;
@@ -30,6 +27,7 @@ public class MovementManager : MonoBehaviour
         else
         {
             EnableContinuousMovement(false);
+            EnableContinuousTurn(false);
             EnableTeleportation(true);
             EnableSnapTurn(true);
             _isTeleportationEnabled = true;
@@ -52,13 +50,11 @@ public class MovementManager : MonoBehaviour
 
     private void EnableSnapTurn(bool value)
     {
-        if (value)
-        {
-            _snapTurnProvider.leftHandSnapTurnAction = _leftHandTurn;
-        }
-        else
-        {
-            _snapTurnProvider.leftHandSnapTurnAction = _uselessProperty;
-        }
+        _snapTurnProvider.enabled = value;
+    }
+
+    private void EnableContinuousTurn(bool value)
+    {
+        _continuousTurnProvider.enabled = value;
     }
 }
