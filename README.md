@@ -5,10 +5,12 @@ A VR game in which the player learns about creating quality of experience questi
 The game is to be used in education as a creative way of learning about quality of experience, focused on subjective methods of questioning. It aims to teach the player to identify the goals of QoE testing while interactively creating basic questionnaires. Starting with the school year 2023/24, it's to be used as an additional learning material in a new school program.
 
 Player's first and last location is a classroom. There they get to learn how to conduct a QoE testing, game rules and controls and to set a few settings. After the game, when they are returned to the classroom, the player will need to solve a quiz as a way of recapitulation of acquired knowledge. On the panel where the menu was at the beginning, there is a quiz with questions related to the game. If the player chooses the correct answer, it will light up in green, and if the player chooses an incorrect answer, it will light up in red. At the end of the quiz, the overall result will be written on the board.
+
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/742fee7c-6649-469d-980f-5a86fa984d01)
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/ae7dcda6-7c94-4cf5-b304-60694487d127)
 
 The main part of the game are four (4) rooms, each of which present a different scenario to the player. Conceptually, this might resemble an escape room. By finishing the current room, they are granted access to the next one. 
+
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/fd83ad91-5c11-46e4-bf1d-66e8b871a72c)
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/2b6512a6-7758-4745-91de-c9621a4f0a47)
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/6cd828e4-cae1-4210-9844-a739ed61148f)
