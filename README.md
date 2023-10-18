@@ -20,16 +20,20 @@ The main part of the game are four (4) rooms, each of which present a different 
 Each room consists of a desk, an office chair, a monitor/television, a whiteboard with magnets, a light source, a trash can, and eight papers. Most rooms also have various other elements, such as shelves, couches, pictures, etc., to make them seem more realistic. Upon the player's arrival in the room, a short video clip (up to 20 s) will be shown on the monitor/television screen. That clip refers to the title of the script written on the white board. The player then needs to find four papers with questions that can be asked in a questionnaire about subjective methods of examining the user experience related to that scenario and pin them on the board in the places marked with magnets. If one or more questions are not correct, the board will provide feedback about this, but it will not say which questions are incorrect. If all the correct questions are selected, a success message will be displayed on the board and the door to the next room will open. When the player successfully solves the tasks of all areas, the last door that will open will be the door of the classroom where he started the game. 
 
 Screens:
+
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/2e870c03-96aa-4ee1-bd25-26afb0275828)
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/b7478ffd-bd63-4ee8-a781-d8c8cc6331bc)
 
 Board without a paper:
+
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/881266cd-5b12-4a98-a552-d047a6383557)
 
 Board with a paper on it:
+
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/6c919634-d560-4960-991f-bee2e7f124f8)
 
 Question paper:
+
 ![image](https://github.com/posaricf/VR-QoE-Game/assets/87568166/6dad2f52-86ef-482b-a721-fe1708ae0ebf)
 
 The game is developed in Unity 2020.3.34f1 for Meta Quest 2.
